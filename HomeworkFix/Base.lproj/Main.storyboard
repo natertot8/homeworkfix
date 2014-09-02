@@ -39,7 +39,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Xu1-M6-KBQ"/>
+                    <navigationItem key="navigationItem" id="Xu1-M6-KBQ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Wam-sB-JIg">
+                            <connections>
+                                <segue destination="rmG-wn-Fz8" kind="show" identifier="Add" id="XUX-xY-Eex"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ABk-Fp-kID" id="Dtz-vT-Df6"/>
                     </connections>
@@ -51,7 +57,7 @@
         <!--Detail View Controller-->
         <scene sceneID="NsA-aF-luL">
             <objects>
-                <viewController id="rmG-wn-Fz8" customClass="DetailViewController" customModule="HomeworkFix" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newPersonDV" id="rmG-wn-Fz8" customClass="DetailViewController" customModule="HomeworkFix" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W1C-1m-x3d"/>
                         <viewControllerLayoutGuide type="bottom" id="Eqg-io-Sex"/>
@@ -86,6 +92,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="GitHub User Name" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z3e-49-2ap">
+                                <rect key="frame" x="228.5" y="535" width="143" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -107,6 +118,8 @@
                             <constraint firstAttribute="centerX" secondItem="N1r-tn-NQx" secondAttribute="centerX" id="W4y-Nl-bSq">
                                 <variation key="heightClass=compact" constant="-182"/>
                             </constraint>
+                            <constraint firstItem="Eqg-io-Sex" firstAttribute="top" secondItem="z3e-49-2ap" secondAttribute="bottom" constant="35" id="kEn-Kd-W8g"/>
+                            <constraint firstAttribute="centerX" secondItem="z3e-49-2ap" secondAttribute="centerX" id="kQt-Fw-RSn"/>
                             <constraint firstAttribute="centerX" secondItem="Vo5-oX-bqn" secondAttribute="centerX" id="kwN-q7-Le2">
                                 <variation key="heightClass=compact" constant="-55"/>
                             </constraint>
@@ -116,6 +129,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gitHubUserName" destination="z3e-49-2ap" id="75i-EP-XHg"/>
                         <outlet property="imageView" destination="uFp-Oq-4Kk" id="0ZU-Qq-5IG"/>
                         <outlet property="textfirstName" destination="N1r-tn-NQx" id="cbO-DO-uvy"/>
                         <outlet property="textlastName" destination="KYw-VI-2N2" id="j5L-E3-bn3"/>
@@ -147,4 +161,7 @@
     <resources>
         <image name="ES.jpg" width="889" height="1112"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="XUX-xY-Eex"/>
+    </inferredMetricsTieBreakers>
 </document>

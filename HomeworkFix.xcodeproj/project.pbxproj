@@ -431,6 +431,7 @@
 				D87D466E19A9575700DEABFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D87D466F19A9575700DEABFE /* Build configuration list for PBXNativeTarget "HomeworkFixTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +440,7 @@
 				D87D467119A9575700DEABFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

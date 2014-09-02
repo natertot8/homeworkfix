@@ -22,6 +22,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var textlastName: UITextField!
     
     
+    @IBOutlet weak var gitHubUserName: UITextField!
     
     
 //MARK: View Methods
@@ -96,7 +97,15 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     
+//coding from willrichman
     
+//    @IBAction func getGitHubButton(sender: AnyObject) {
+//        if self.personDisplayed?.gitHubUserName == nil {
+//            var gitHubPrompt = UIAlertController(title: "GitHub", message: "What is this person's GitHub user name?", preferredStyle: UIAlertControllerStyle.Alert)
+//            gitHubPrompt
+    
+    
+    
+    }
 
-    
-}
+
