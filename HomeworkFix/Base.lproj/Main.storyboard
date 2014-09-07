@@ -40,7 +40,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xu1-M6-KBQ">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Wam-sB-JIg">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="Wam-sB-JIg">
                             <connections>
                                 <segue destination="rmG-wn-Fz8" kind="show" identifier="Add" id="XUX-xY-Eex"/>
                             </connections>
@@ -66,13 +66,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Name" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1r-tn-NQx">
-                                <rect key="frame" x="254" y="436" width="92" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ES.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uFp-Oq-4Kk">
+                                <rect key="frame" x="200" y="100" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="0pL-Cb-0pl"/>
+                                    <constraint firstAttribute="width" constant="200" id="g8e-SM-7IX"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last Name" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KYw-VI-2N2">
+                                <rect key="frame" x="255" y="382" width="91" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="GitHub Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z3e-49-2ap">
+                                <rect key="frame" x="232.5" y="420" width="136.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7mg-wJ-WH3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Name" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1r-tn-NQx">
+                                <rect key="frame" x="254" y="344" width="92" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BLGameofDeath.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Qy6-Mm-OsD">
+                                <rect key="frame" x="200" y="444" width="200" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="Pyi-Ot-mtn"/>
+                                    <constraint firstAttribute="width" constant="200" id="vgV-Vf-rMa"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vo5-oX-bqn">
-                                <rect key="frame" x="250" y="342" width="100" height="30"/>
+                                <rect key="frame" x="250" y="308" width="100" height="30"/>
                                 <state key="normal" title="Choose Image">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -80,55 +107,76 @@
                                     <action selector="photoButtonPressed:" destination="rmG-wn-Fz8" eventType="touchUpInside" id="Xbo-ur-Yvn"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ES.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uFp-Oq-4Kk">
-                                <rect key="frame" x="200" y="126" width="200" height="200"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yax-e1-b4S">
+                                <rect key="frame" x="223" y="444" width="149" height="111"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="0pL-Cb-0pl"/>
-                                    <constraint firstAttribute="width" constant="200" id="g8e-SM-7IX"/>
+                                    <constraint firstAttribute="height" constant="111" id="U9C-ni-r27"/>
+                                    <constraint firstAttribute="width" constant="149" id="saD-a3-2JD"/>
                                 </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last Name" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KYw-VI-2N2">
-                                <rect key="frame" x="255" y="482" width="91" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="GitHub User Name" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z3e-49-2ap">
-                                <rect key="frame" x="228.5" y="535" width="143" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gitButton:" destination="rmG-wn-Fz8" eventType="touchUpInside" id="lVI-HW-967"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Vo5-oX-bqn" firstAttribute="top" secondItem="uFp-Oq-4Kk" secondAttribute="bottom" constant="16" id="5mR-Pm-HBm">
+                            <constraint firstAttribute="centerY" secondItem="Qy6-Mm-OsD" secondAttribute="centerY" constant="-200" id="2mG-ol-ugF">
+                                <variation key="heightClass=compact" constant="-88.5"/>
+                            </constraint>
+                            <constraint firstItem="Vo5-oX-bqn" firstAttribute="top" secondItem="uFp-Oq-4Kk" secondAttribute="bottom" constant="8" id="5mR-Pm-HBm">
                                 <variation key="heightClass=compact" constant="-115"/>
                             </constraint>
-                            <constraint firstItem="N1r-tn-NQx" firstAttribute="top" secondItem="Vo5-oX-bqn" secondAttribute="bottom" constant="64" id="JTT-yi-FRp">
-                                <variation key="heightClass=compact" constant="-78"/>
+                            <constraint firstAttribute="centerX" secondItem="yax-e1-b4S" secondAttribute="centerX" constant="2.5" id="Al1-dK-LUS">
+                                <variation key="heightClass=compact" constant="-182.5"/>
                             </constraint>
-                            <constraint firstItem="Eqg-io-Sex" firstAttribute="top" secondItem="KYw-VI-2N2" secondAttribute="bottom" constant="88" id="Mey-py-XFD">
-                                <variation key="heightClass=compact" constant="80"/>
+                            <constraint firstItem="N1r-tn-NQx" firstAttribute="top" secondItem="Vo5-oX-bqn" secondAttribute="bottom" constant="6" id="JTT-yi-FRp">
+                                <variation key="heightClass=compact" constant="-131"/>
+                            </constraint>
+                            <constraint firstItem="z3e-49-2ap" firstAttribute="top" secondItem="KYw-VI-2N2" secondAttribute="bottom" constant="8" id="LG3-ON-ZS0">
+                                <variation key="heightClass=compact" constant="17"/>
+                            </constraint>
+                            <constraint firstItem="Eqg-io-Sex" firstAttribute="top" secondItem="KYw-VI-2N2" secondAttribute="bottom" constant="188" id="Mey-py-XFD">
+                                <variation key="heightClass=compact" constant="200"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="uFp-Oq-4Kk" secondAttribute="centerX" id="OY7-9O-phc">
                                 <variation key="heightClass=compact" constant="144"/>
                             </constraint>
-                            <constraint firstItem="KYw-VI-2N2" firstAttribute="top" secondItem="N1r-tn-NQx" secondAttribute="bottom" constant="16" id="U4Q-k0-dk5">
-                                <variation key="heightClass=compact" constant="75"/>
+                            <constraint firstItem="KYw-VI-2N2" firstAttribute="top" secondItem="N1r-tn-NQx" secondAttribute="bottom" constant="8" id="U4Q-k0-dk5">
+                                <variation key="heightClass=compact" constant="8"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="N1r-tn-NQx" secondAttribute="centerX" id="W4y-Nl-bSq">
                                 <variation key="heightClass=compact" constant="-182"/>
                             </constraint>
-                            <constraint firstItem="Eqg-io-Sex" firstAttribute="top" secondItem="z3e-49-2ap" secondAttribute="bottom" constant="35" id="kEn-Kd-W8g"/>
-                            <constraint firstAttribute="centerX" secondItem="z3e-49-2ap" secondAttribute="centerX" id="kQt-Fw-RSn"/>
+                            <constraint firstItem="Eqg-io-Sex" firstAttribute="top" secondItem="z3e-49-2ap" secondAttribute="bottom" constant="144" id="kEn-Kd-W8g">
+                                <variation key="heightClass=compact" constant="108"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="z3e-49-2ap" secondAttribute="centerX" id="kQt-Fw-RSn">
+                                <variation key="heightClass=compact" constant="-181.5"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="Vo5-oX-bqn" secondAttribute="centerX" id="kwN-q7-Le2">
-                                <variation key="heightClass=compact" constant="-55"/>
+                                <variation key="heightClass=compact" constant="-33"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="Qy6-Mm-OsD" secondAttribute="centerX" id="oEx-17-Yt2">
+                                <variation key="heightClass=compact" constant="-181"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="KYw-VI-2N2" secondAttribute="centerX" id="pQv-hz-4tx">
                                 <variation key="heightClass=compact" constant="-181.5"/>
                             </constraint>
+                            <constraint firstAttribute="centerY" secondItem="yax-e1-b4S" secondAttribute="centerY" constant="-200" id="wrr-bG-Pog">
+                                <variation key="heightClass=compact" constant="-88.5"/>
+                            </constraint>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="kEn-Kd-W8g"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="gitHubPic" destination="Qy6-Mm-OsD" id="Sel-K3-e1W"/>
                         <outlet property="gitHubUserName" destination="z3e-49-2ap" id="75i-EP-XHg"/>
                         <outlet property="imageView" destination="uFp-Oq-4Kk" id="0ZU-Qq-5IG"/>
                         <outlet property="textfirstName" destination="N1r-tn-NQx" id="cbO-DO-uvy"/>
@@ -159,6 +207,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BLGameofDeath.jpg" width="1000" height="750"/>
         <image name="ES.jpg" width="889" height="1112"/>
     </resources>
     <inferredMetricsTieBreakers>

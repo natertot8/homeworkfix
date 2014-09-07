@@ -12,6 +12,10 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     var DTPersonProfile : Person!
     
+    var gitHubResourcePath = "https://api.github.com/users/"
+    
+    var alertTextField: UITextField!
+    
     
     @IBOutlet weak var imageView: UIImageView!
    
@@ -24,6 +28,31 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var gitHubUserName: UITextField!
     
+    
+    @IBOutlet weak var gitHubPic: UIImageView!
+    
+    
+    @IBAction func gitButton(sender: AnyObject) {println ("BOOM!")
+        var alert = UIAlertController(title: "GitHub", message: "What's your GitHub Username?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        
+        alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+            textField.placeholder = "GitHub Username"
+            self.alertTextField = textField!
+            println (self.alertTextField.text)
+    })
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK!", style: UIAlertActionStyle.Default) { (alertAction:UIAlertAction!) in
+            if self.alertTextField.text != nil {
+                self.gitHubUserName.text = self.alertTextField.text}
+        
+    })
+
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
+
+
     
 //MARK: View Methods
     
@@ -40,11 +69,15 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewWillAppear(animated: Bool) {
         self.textfirstName.text = self.DTPersonProfile.firstName
         self.textlastName.text = self.DTPersonProfile.lastName
-        
+
         if self.DTPersonProfile.image != nil {
             self.imageView.image = self.DTPersonProfile.image
-    }
-        
+        }
+//        if self.DTPersonProfile.gitHubUserName != nil {
+            self.gitHubUserName.text = self.DTPersonProfile.gitHubUserName
+            }
+    
+    
 
     
 
@@ -56,11 +89,16 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
+}
     */
-    }
+    
     override func viewWillDisappear (animated: Bool) {
         self.DTPersonProfile.firstName = self.textfirstName.text
         self.DTPersonProfile.lastName = self.textlastName.text
+        if self.gitHubUserName.text != nil {
+            self.DTPersonProfile.gitHubUserName = self.gitHubUserName.text
+
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -89,7 +127,6 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         var editedImage = info[UIImagePickerControllerEditedImage] as UIImage
         self.imageView.image = editedImage
-        println (self.DTPersonProfile.firstName)
         self.DTPersonProfile.image = editedImage
     }
     

@@ -96,8 +96,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) [0] as String
-        NSKeyedArchiver.archiveRootObject(allArray, toFile: documentsPath + "/archive2")
+        NSKeyedArchiver.archiveRootObject(self.allArray, toFile: self.documentsPath + "/archive2")
         
+
+        println (allArray[0][0].gitHubUserName)
+
         self.tableView.reloadData()
         
     }

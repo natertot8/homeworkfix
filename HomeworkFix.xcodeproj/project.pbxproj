@@ -15,6 +15,7 @@
 		D87D467519A957A700DEABFE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87D467419A957A700DEABFE /* Person.swift */; };
 		D87D467819A962C700DEABFE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87D467719A962C700DEABFE /* DetailViewController.swift */; };
 		D87D467A19A96DB100DEABFE /* ES.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D87D467919A96DB100DEABFE /* ES.jpg */; };
+		D8B760F619BBBB5D00EDB369 /* BLGameofDeath.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8B760F519BBBB5D00EDB369 /* BLGameofDeath.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		D87D467419A957A700DEABFE /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		D87D467719A962C700DEABFE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D87D467919A96DB100DEABFE /* ES.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ES.jpg; path = "../../../../App Photos/ES.jpg"; sourceTree = "<group>"; };
+		D8B760F519BBBB5D00EDB369 /* BLGameofDeath.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = BLGameofDeath.jpg; path = "../../../../App Photos/BLGameofDeath.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				D87D465419A9575600DEABFE /* Info.plist */,
 				D87D467919A96DB100DEABFE /* ES.jpg */,
+				D8B760F519BBBB5D00EDB369 /* BLGameofDeath.jpg */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				D87D465B19A9575600DEABFE /* Main.storyboard in Resources */,
 				D87D467A19A96DB100DEABFE /* ES.jpg in Resources */,
 				D87D465D19A9575600DEABFE /* Images.xcassets in Resources */,
+				D8B760F619BBBB5D00EDB369 /* BLGameofDeath.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

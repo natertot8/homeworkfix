@@ -15,6 +15,7 @@ class Person : NSObject, NSCoding {
     var lastName : String
     var image : UIImage?
     var gitHubUserName : String?
+    var gitHubPic: UIImage?
     
 
 
@@ -24,13 +25,14 @@ class Person : NSObject, NSCoding {
         self.lastName = aDecoder.decodeObjectForKey("lastName") as String
             if let myImage = aDecoder.decodeObjectForKey("image") as? UIImage {
                 self.image = myImage
-            }
-            
-            
-//        self.image = aDecoder.decodeObjectForKey("image") as? UIImage
+                }
+            if let myGitUserName = aDecoder.decodeObjectForKey("gitHubUserName") as? String {
+                self.gitHubUserName = myGitUserName
+                }
+    
         super.init()
-        
-    }
+}
+
 
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(self.firstName, forKey: "firstName")
