@@ -14,6 +14,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     var gitHubResourcePath = "https://api.github.com/users/"
     
+    var gitURL = "https://api.github.com"
+    
     var alertTextField: UITextField!
     
     
